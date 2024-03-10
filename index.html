@@ -48,6 +48,8 @@
             </div>
             <div class="form-group">
                 <label for="data2">Courses Id</label>
+                <!-- The input element with a type of text represents a one-line plain text edit control for the element's raw value -->
+            <!-- The oninput attribute calls a JavaScript function that replaces any non-numeric characters with an empty string, effectively allowing only numeric input -->
                 <input type="text" class="form-control" id="data2"
                 oninput="this.value = this.value.replace(/[^0-9]/g, '');"
                  required>
@@ -60,6 +62,7 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
+                    <!-- on click for sort script-->
                     <th scope="col" onclick="sortTable(1)">Courses</th>
                     <th scope="col" onclick="sortTable(2)">Courses Id</th>
                     <th scope="col">Actions</th>
