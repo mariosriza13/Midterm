@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deree App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A website where users can add data to a list">
+    <meta name="keywords" content="data, list, user, courses">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="E:\midterminternet\Deree-Logo.jpg" width="200" height="200" class="d-inline-block align-top" alt="">
+                Deree App
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    
+     
+      <!-- Main Content -->
+      <main class="container mt-3">
+        <!-- Form to add data -->
+        <form id="data-form">
+            <div class="form-group">
+                <label for="data1">Courses</label>
+                <input type="text" class="form-control" id="data1" required>
+            </div>
+            <div class="form-group">
+                <label for="data2">Courses Id</label>
+                <input type="text" class="form-control" id="data2"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+                 required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add to List</button>
+        </form>
+
+        <!-- Table to display data -->
+        <table class="table mt-3" id="data-table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" onclick="sortTable(1)">Courses</th>
+                    <th scope="col" onclick="sortTable(2)">Courses Id</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data rows will be added here -->
+            </tbody>
+        </table>
+    </main>
+    
+    <!-- Footer -->
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="E:\midterminternet\Deree-Logo.jpg" alt="Your Logo" width="100" height="100">
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright">
+            Your Website © 2024
+        </p>
+
+        <!-- Contact Details -->
+        <div class="contact-details">
+            <a href="https://www.facebook.com/your_facebook_page" target="_blank">Facebook</a> |
+            <a href="https://twitter.com/your_twitter_handle" target="_blank">Twitter</a> |
+            <a href="https://www.linkedin.com/in/your_linkedin_profile" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
